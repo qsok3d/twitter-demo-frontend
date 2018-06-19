@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import ProfilePage from "./ProfilePage";
 import styled from "styled-components";
 
