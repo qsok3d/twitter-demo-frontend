@@ -14,6 +14,7 @@ const TweetButton = styled.button`
   color: #fff;
   margin-right: 6px;
   margin-top: 6px;
+  margin-bottom: 18px;
 `;
 
 export default props => {

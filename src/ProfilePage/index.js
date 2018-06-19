@@ -3,6 +3,7 @@ import Header from "./Header";
 import image from "./image.png";
 import styled from "styled-components";
 import ProfileInfo from "./ProfileInfo";
+import TweetList from "./TweetList";
 
 const MainImage = styled.img``;
 
@@ -12,8 +13,8 @@ const ProfilePage = styled.div`
 `;
 
 const Profile = styled.div`
-  background-color: #e6ecf0;
   display: flex;
+  background-color: #e6ecf0;
 `;
 
 export default () => {
@@ -22,7 +23,16 @@ export default () => {
       <Header />
       <MainImage alt="main" src={image} />
       <Profile>
-        <ProfileInfo />
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-3">
+              <ProfileInfo />
+            </div>
+            <div className="col-offset-3 col-xs-6">
+              <TweetList />
+            </div>
+          </div>
+        </div>
       </Profile>
     </ProfilePage>
   );

@@ -9,6 +9,7 @@ const Wrap = styled.div`
   justify-content: space-between;
   padding-top: 6px;
   padding-bottom: 6px;
+  background-color: #ffffff;
 `;
 
 const TwitterLogo = styled.img``;

@@ -5,6 +5,7 @@ import approved from "./approved.svg";
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
+  padding-top: 40px;
 `;
 
 const ProfileHeader = styled.div`
