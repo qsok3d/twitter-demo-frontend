@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import image from "./image.png";
 import styled from "styled-components";
+import TwitterBar from "./TwitterBar";
 import ProfileInfo from "./ProfileInfo";
 import TweetList from "./TweetList";
 import Recommendation from "./Recommendation";
@@ -24,6 +25,7 @@ export default () => {
     <ProfilePage>
       <Header />
       <MainImage alt="main" src={image} />
+      <TwitterBar />
       <Profile>
         <div className="container">
           <div className="row">
