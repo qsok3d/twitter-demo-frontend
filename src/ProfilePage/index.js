@@ -18,6 +18,7 @@ const ProfilePage = styled.div`
 const Profile = styled.div`
   display: flex;
   background-color: #e6ecf0;
+  padding-top: 9px;
 `;
 
 export default () => {

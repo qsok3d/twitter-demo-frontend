@@ -9,6 +9,7 @@ const TwitterBar = styled.div`
   border-bottom: 1px solid #b0b8be;
   padding: 9px 0;
   display: flex;
+  padding-bottom: 9px;
 `;
 
 const Wrap = styled.div`
