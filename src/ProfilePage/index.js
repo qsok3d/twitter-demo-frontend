@@ -4,7 +4,7 @@ import image from "./image.png";
 import styled from "styled-components";
 import TwitterBar from "./TwitterBar";
 import ProfileInfo from "./ProfileInfo";
-import TweetList from "./TweetList";
+import Tweet from "./Tweet";
 import Recommendation from "./Recommendation";
 
 const MainImage = styled.img``;
@@ -34,7 +34,7 @@ export default () => {
               <ProfileInfo />
             </div>
             <div className="col-offset-3 col-xs-6">
-              <TweetList />
+              <Tweet />
             </div>
             <div className="col-offset-9 col-xs-3">
               <Recommendation />
