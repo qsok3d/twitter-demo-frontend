@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const About = styled.div`
   display: flex;
@@ -15,20 +15,15 @@ const Text = styled.span`
   font-size: 14px;
   line-height: 28px;
   font-weight: 400;
-  color: #707e88;
   margin: 0;
-  ${props =>
-    props.kind === `link` &&
-    css`
-      color: #1da1f2;
-    `};
+  color: ${props => (props.active ? "#707e88" : "#1da1f2")};
 `;
 
 export default props => {
   return (
     <About>
       <Pic alt="pic" src={props.about.img} />
-      <Text kind={props.about.link}>{props.about.text}</Text>
+      <Text active={props.about.link}>{props.about.text}</Text>
     </About>
   );
 };

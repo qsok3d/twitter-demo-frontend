@@ -7,9 +7,7 @@ import avatar from "./avatar.png";
 const TwitterBar = styled.div`
   background-color: #ffffff;
   border-bottom: 1px solid #b0b8be;
-  padding: 9px 0;
   display: flex;
-  padding-bottom: 9px;
 `;
 
 const Wrap = styled.div`

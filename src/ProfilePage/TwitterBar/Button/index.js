@@ -6,7 +6,7 @@ const Wrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-top: 4px;
+  padding: 12px 0;
 `;
 
 const Follow = styled.button`
