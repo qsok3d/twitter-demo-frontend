@@ -7,6 +7,7 @@ import avaCredo from "./avaCredo.png";
 import avaE from "./avaE.png";
 import approved from "./approved.svg";
 import people from "./people.svg";
+import { NavLink } from "react-router-dom";
 
 const WhoFollow = styled.div`
   display: flex;
@@ -40,7 +41,7 @@ const Refresh = styled.button`
   background-color: #fff;
 `;
 
-const View = styled.a`
+const View = styled(NavLink)`
   text-decoration: none;
   border: none;
   color: #1da1f2;
@@ -100,7 +101,7 @@ export default () => {
       <Header>
         <Title>Who to follow</Title>
         <Refresh>Refresh</Refresh>
-        <View>View all</View>
+        <View to="/ViewAll">View all</View>
       </Header>
       {flw.map(flw => <Follow flw={flw} />)}
       <Footer>

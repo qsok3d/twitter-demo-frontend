@@ -33,7 +33,7 @@ const Text = styled.p`
   margin: 0;
 `;
 
-const AvaLink = styled.a`
+const Ava = styled.div`
   text-decoration: none;
   border: none;
   display: flex;
@@ -68,7 +68,7 @@ export default props => {
         <Media alt="follow" src={media} />
         <Text>522 Photos and videos</Text>
       </MediaHeader>
-      <AvaLink>{ava.map(ava => <Avatar ava={ava} />)}</AvaLink>
+      <Ava>{ava.map(ava => <Avatar ava={ava} />)}</Ava>
     </Medias>
   );
 };

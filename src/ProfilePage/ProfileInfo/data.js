@@ -17,12 +17,3 @@ export const about = [
     img: calendar
   }
 ];
-
-export const buttons = [
-  {
-    text: "Tweet to"
-  },
-  {
-    text: "Message"
-  }
-];
