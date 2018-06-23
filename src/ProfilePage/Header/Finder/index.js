@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import avatar from "./avatar.png";
 import search from "./search.svg";
 
 const Finder = styled.div`
@@ -56,7 +55,7 @@ export default () => {
         <SearchInput placeholder="Search Twitter" />
         <SearchPic alt="search" src={search} />
       </Search>
-      <Avatar alt="avatar" src={avatar} />
+      <Avatar alt="avatar" src={process.env.PUBLIC_URL + "/Image/avatar.png"} />
       <TweetButton>Tweet</TweetButton>
     </Finder>
   );
