@@ -9,27 +9,27 @@ const Stats = styled.div`
 const indicator = [
   {
     text: "Tweets",
-    count: "8,058",
+    count: 8.058,
     active: "active"
   },
   {
     text: "Following",
-    count: "721",
+    count: 721,
     active: ""
   },
   {
     text: "Followers",
-    count: "1,815",
+    count: 1.815,
     active: ""
   },
   {
     text: "Likes",
-    count: "460",
+    count: 460,
     active: ""
   },
   {
     text: "Lists",
-    count: "2",
+    count: 2,
     active: ""
   }
 ];
