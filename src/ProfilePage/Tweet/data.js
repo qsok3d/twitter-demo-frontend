@@ -18,22 +18,22 @@ export const tweet = [
     action: [
       {
         img: comment,
-        count: "",
+        count: 0,
         active: false
       },
       {
         img: retweet,
-        count: "17",
+        count: 17,
         active: false
       },
       {
         img: likeActive,
-        count: "47",
+        count: 47,
         active: true
       },
       {
         img: mail,
-        count: "",
+        count: 0,
         active: false
       }
     ]
@@ -49,22 +49,22 @@ export const tweet = [
     action: [
       {
         img: comment,
-        count: "1",
+        count: 1,
         active: false
       },
       {
         img: retweet,
-        count: "4",
+        count: 4,
         active: false
       },
       {
         img: like,
-        count: "2",
+        count: 2,
         active: false
       },
       {
         img: mail,
-        count: "",
+        count: 0,
         active: false
       }
     ]
@@ -81,22 +81,22 @@ export const tweet = [
     action: [
       {
         img: comment,
-        count: "",
+        count: 0,
         active: false
       },
       {
         img: retweet,
-        count: "",
+        count: 0,
         active: false
       },
       {
         img: like,
-        count: "",
+        count: 0,
         active: false
       },
       {
         img: mail,
-        count: "",
+        count: 0,
         active: false
       }
     ]

@@ -23,6 +23,8 @@ const Main = styled.div`
 
 const Action = styled.div`
   display: flex;
+  align-content: center;
+  padding-right: 40px;
 `;
 
 const TweetNav = styled.nav`

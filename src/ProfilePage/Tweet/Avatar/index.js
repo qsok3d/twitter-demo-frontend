@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import avatar from "./avatar.svg";
+import avatar from "./avatar.png";
 import pinned from "./pinned.svg";
 
 const Avatar = styled.div`
@@ -23,18 +23,18 @@ const AvatarImage = styled.img`
 `;
 
 export default props => {
-  if (props.tweet.pinned === false) {
-    return (
-      <Avatar>
-        <AvatarImage alt="avatar" src={avatar} />
-      </Avatar>
-    );
-  } else {
-    return (
-      <AvatarPinned>
-        <PinnedImage alt="pinned" src={pinned} />
-        <AvatarImage alt="avatar" src={avatar} />
-      </AvatarPinned>
-    );
-  }
+  return (
+    <div>
+      {props.tweet.pinned ? (
+        <AvatarPinned>
+          <PinnedImage alt="pinned" src={pinned} />
+          <AvatarImage alt="avatar" src={avatar} />
+        </AvatarPinned>
+      ) : (
+        <Avatar>
+          <AvatarImage alt="avatar" src={avatar} />
+        </Avatar>
+      )}
+    </div>
+  );
 };

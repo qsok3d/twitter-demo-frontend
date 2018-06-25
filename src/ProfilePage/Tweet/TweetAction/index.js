@@ -4,6 +4,8 @@ import styled from "styled-components";
 const TweetAction = styled.div`
   padding-top: 15px;
   padding-right: 44px;
+  display: flex;
+  align-content: center;
 `;
 
 const Button = styled.button`
@@ -29,23 +31,18 @@ const CountActive = Count.extend`
 `;
 
 export default tweet => {
-  if (tweet.action.active === false) {
-    return (
-      <TweetAction>
-        <Button>
-          <ButtonImage alt="picture" src={tweet.action.img} />
-        </Button>
-        <Count>{tweet.action.count}</Count>
-      </TweetAction>
-    );
-  } else {
-    return (
-      <TweetAction>
-        <Button>
-          <ButtonImage alt="picture" src={tweet.action.img} />
-        </Button>
-        <CountActive>{tweet.action.count}</CountActive>
-      </TweetAction>
-    );
-  }
+  return (
+    <TweetAction>
+      <Button>
+        <ButtonImage alt="picture" src={tweet.action.img} />
+      </Button>
+      {tweet.action.active ? (
+        <CountActive>
+          {tweet.action.count > 0 && tweet.action.count}
+        </CountActive>
+      ) : (
+        <Count>{tweet.action.count > 0 && tweet.action.count}</Count>
+      )}
+    </TweetAction>
+  );
 };
