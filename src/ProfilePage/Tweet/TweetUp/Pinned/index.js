@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Pinned = styled.div`
   padding-bottom: 4px;
@@ -7,7 +7,7 @@ const Pinned = styled.div`
 `;
 
 const Text = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
@@ -15,10 +15,10 @@ const Text = styled.span`
   margin: 0;
 `;
 
-export default () => {
-  return (
-    <Pinned>
-      <Text>Pinned Tweet</Text>
-    </Pinned>
-  );
-};
+export default () => (
+  <Pinned>
+    <Text>
+Pinned Tweet
+    </Text>
+  </Pinned>
+);

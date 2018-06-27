@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import TweetUp from "./TweetUp";
-import TweetContent from "./TweetContent";
-import TweetAction from "./TweetAction";
-import TweetHeader from "./tweetHeader";
-import { tweet } from "./data";
-import Avatar from "./Avatar";
+import TweetUp from './TweetUp';
+import TweetContent from './TweetContent';
+import TweetAction from './TweetAction';
+import TweetHeader from './tweetHeader';
+import tweets from './data';
+import Avatar from './Avatar';
 
 const Tweet = styled.div`
   display: flex;
@@ -33,40 +33,38 @@ const TweetNav = styled.nav`
   padding-left: 12px;
 `;
 
-const tweetHead = [
+const tweetHeader = [
   {
-    text: "Tweets",
-    active: false
+    text: 'Tweets',
+    active: false,
   },
   {
-    text: "Tweets & replies",
-    active: true
+    text: 'Tweets & replies',
+    active: true,
   },
   {
-    text: "Media",
-    active: true
-  }
+    text: 'Media',
+    active: true,
+  },
 ];
 
-export default () => {
-  return (
-    <Main>
-      <TweetNav>
-        {tweetHead.map(tweetHead => <TweetHeader tweetHead={tweetHead} />)}
-      </TweetNav>
+export default () => (
+  <Main>
+    <TweetNav>
+      {tweetHeader.map(tweetHead => <TweetHeader tweetHead={tweetHead} />)}
+    </TweetNav>
 
-      {tweet.map(tweet => (
-        <Tweet>
-          <Avatar tweet={tweet} />
-          <Main>
-            <TweetUp tweet={tweet} />
-            <TweetContent tweet={tweet} />
-            <Action>
-              {tweet.action.map(action => <TweetAction action={action} />)}
-            </Action>
-          </Main>
-        </Tweet>
-      ))}
-    </Main>
-  );
-};
+    {tweets.map(tweet => (
+      <Tweet>
+        <Avatar tweet={tweet} />
+        <Main>
+          <TweetUp tweet={tweet} />
+          <TweetContent tweet={tweet} />
+          <Action>
+            {tweet.action.map(action => <TweetAction action={action} />)}
+          </Action>
+        </Main>
+      </Tweet>
+    ))}
+  </Main>
+);

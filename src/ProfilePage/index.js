@@ -1,11 +1,11 @@
-import React from "react";
-import Header from "./Header";
-import image from "./image.png";
-import styled from "styled-components";
-import TwitterBar from "./TwitterBar";
-import ProfileInfo from "./ProfileInfo";
-import Tweet from "./Tweet";
-import Recommendation from "./Recommendation";
+import React from 'react';
+import styled from 'styled-components';
+import Header from './Header';
+import image from './image.png';
+import TwitterBar from './TwitterBar';
+import ProfileInfo from './ProfileInfo';
+import Tweet from './Tweet';
+import Recommendation from './Recommendation';
 
 const MainImage = styled.img``;
 
@@ -21,27 +21,25 @@ const Profile = styled.div`
   padding-top: 9px;
 `;
 
-export default () => {
-  return (
-    <ProfilePage>
-      <Header />
-      <MainImage alt="main" src={image} />
-      <TwitterBar />
-      <Profile>
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-3">
-              <ProfileInfo />
-            </div>
-            <div className="col-offset-3 col-xs-6">
-              <Tweet />
-            </div>
-            <div className="col-offset-9 col-xs-3">
-              <Recommendation />
-            </div>
+export default () => (
+  <ProfilePage>
+    <Header />
+    <MainImage alt="main" src={image} />
+    <TwitterBar />
+    <Profile>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-3">
+            <ProfileInfo />
+          </div>
+          <div className="col-offset-3 col-xs-6">
+            <Tweet />
+          </div>
+          <div className="col-offset-9 col-xs-3">
+            <Recommendation />
           </div>
         </div>
-      </Profile>
-    </ProfilePage>
-  );
-};
+      </div>
+    </Profile>
+  </ProfilePage>
+);

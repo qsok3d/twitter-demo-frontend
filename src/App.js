@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import ProfilePage from "./ProfilePage";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import React from 'react';
+import {
+  BrowserRouter, Route, Switch, Redirect,
+} from 'react-router-dom';
+import ProfilePage from './ProfilePage';
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Redirect exact from="/" to="/EveryInteract" />
-          <Route exact path="/EveryInteract" component={ProfilePage} />
-        </Switch>
-      </BrowserRouter>
-    );
-  }
+function App() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Redirect exact from="/" to="/EveryInteract" />
+        <Route exact path="/EveryInteract" component={ProfilePage} />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;

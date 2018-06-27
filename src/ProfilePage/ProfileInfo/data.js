@@ -1,19 +1,21 @@
-import link from "./link.svg";
-import location from "./location.svg";
-import calendar from "./calendar.svg";
+import link from './link.svg';
+import location from './location.svg';
+import calendar from './calendar.svg';
 
-export const about = [
+const bout = [
   {
-    text: "London, UK",
-    img: location
+    text: 'London, UK',
+    img: location,
   },
   {
-    text: "everyinteraction.com",
+    text: 'everyinteraction.com',
     img: link,
-    link: "link"
+    link: 'link',
   },
   {
-    text: "Joined May 2008",
-    img: calendar
-  }
+    text: 'Joined May 2008',
+    img: calendar,
+  },
 ];
+
+export default bout;

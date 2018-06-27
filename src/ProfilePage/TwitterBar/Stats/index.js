@@ -1,43 +1,41 @@
-import React from "react";
-import styled from "styled-components";
-import Indicator from "./indicator";
+import React from 'react';
+import styled from 'styled-components';
+import Indicator from './indicator';
 
 const Stats = styled.div`
   display: flex;
 `;
 
-const indicator = [
+const indicators = [
   {
-    text: "Tweets",
+    text: 'Tweets',
     count: 8.058,
-    active: "active"
+    active: 'active',
   },
   {
-    text: "Following",
+    text: 'Following',
     count: 721,
-    active: ""
+    active: '',
   },
   {
-    text: "Followers",
+    text: 'Followers',
     count: 1.815,
-    active: ""
+    active: '',
   },
   {
-    text: "Likes",
+    text: 'Likes',
     count: 460,
-    active: ""
+    active: '',
   },
   {
-    text: "Lists",
+    text: 'Lists',
     count: 2,
-    active: ""
-  }
+    active: '',
+  },
 ];
 
-export default () => {
-  return (
-    <Stats>
-      {indicator.map(indicator => <Indicator indicator={indicator} />)}
-    </Stats>
-  );
-};
+export default () => (
+  <Stats>
+    {indicators.map(indicator => <Indicator indicator={indicator} />)}
+  </Stats>
+);

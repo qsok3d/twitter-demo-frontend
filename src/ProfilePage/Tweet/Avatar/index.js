@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import avatar from "./avatar.png";
-import pinned from "./pinned.svg";
+import React from 'react';
+import styled from 'styled-components';
+import avatar from './avatar.png';
+import pinned from './pinned.svg';
 
 const Avatar = styled.div`
   border-radius: 100px;
@@ -22,19 +22,17 @@ const AvatarImage = styled.img`
   height: 41px;
 `;
 
-export default props => {
-  return (
-    <div>
-      {props.tweet.pinned ? (
-        <AvatarPinned>
-          <PinnedImage alt="pinned" src={pinned} />
-          <AvatarImage alt="avatar" src={avatar} />
-        </AvatarPinned>
-      ) : (
-        <Avatar>
-          <AvatarImage alt="avatar" src={avatar} />
-        </Avatar>
-      )}
-    </div>
-  );
-};
+export default ({ tweet }) => (
+  <div>
+    {tweet.pinned ? (
+      <AvatarPinned>
+        <PinnedImage alt="pinned" src={pinned} />
+        <AvatarImage alt="avatar" src={avatar} />
+      </AvatarPinned>
+    ) : (
+      <Avatar>
+        <AvatarImage alt="avatar" src={avatar} />
+      </Avatar>
+    )}
+  </div>
+);

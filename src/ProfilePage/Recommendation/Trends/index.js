@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Theme from "./theme.js";
+import React from 'react';
+import styled from 'styled-components';
+import Theme from './theme';
 
 const Trends = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ const Header = styled.header`
 `;
 
 const Title = styled.h2`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 600;
@@ -27,7 +27,7 @@ const Title = styled.h2`
 `;
 
 const Change = styled.button`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
@@ -37,40 +37,42 @@ const Change = styled.button`
   padding: 0;
 `;
 
-const theme = [
+const themes = [
   {
-    title: "#BringYourDogToWorkDay"
+    title: '#BringYourDogToWorkDay',
   },
   {
-    title: "#FridayFeeling",
-    subtitle: "12.1K Tweets"
+    title: '#FridayFeeling',
+    subtitle: '12.1K Tweets',
   },
   {
-    title: "#BrexitAnniversary",
-    subtitle: "It`s one year since the UK voted to leave the European Union"
+    title: '#BrexitAnniversary',
+    subtitle: 'It`s one year since the UK voted to leave the European Union',
   },
   {
-    title: "HMS Queen Elizabeth",
-    subtitle: "1,036 Tweets"
+    title: 'HMS Queen Elizabeth',
+    subtitle: '1,036 Tweets',
   },
   {
-    title: "Joe Budden",
-    subtitle: "1,036 Tweets"
+    title: 'Joe Budden',
+    subtitle: '1,036 Tweets',
   },
   {
-    title: "Trident",
-    subtitle: "6,136 Tweets"
-  }
+    title: 'Trident',
+    subtitle: '6,136 Tweets',
+  },
 ];
 
-export default () => {
-  return (
-    <Trends>
-      <Header>
-        <Title>United Kingdom Trends</Title>
-        <Change>Change</Change>
-      </Header>
-      {theme.map(theme => <Theme theme={theme} />)}
-    </Trends>
-  );
-};
+export default () => (
+  <Trends>
+    <Header>
+      <Title>
+United Kingdom Trends
+      </Title>
+      <Change>
+Change
+      </Change>
+    </Header>
+    {themes.map(theme => <Theme theme={theme} />)}
+  </Trends>
+);

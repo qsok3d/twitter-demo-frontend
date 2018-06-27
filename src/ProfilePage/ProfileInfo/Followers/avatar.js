@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Avatar = styled.img`
   padding-right: 5px;
@@ -8,6 +8,4 @@ const Avatar = styled.img`
   padding-bottom: 6px;
 `;
 
-export default props => {
-  return <Avatar alt="ava" src={props.ava.img} />;
-};
+export default ({ ava }) => <Avatar alt="ava" src={ava.img} />;

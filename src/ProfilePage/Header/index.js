@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Finder from "./Finder";
-import twitter from "./twitter.svg";
-import Navigation from "./Navigation";
+import React from 'react';
+import styled from 'styled-components';
+import Finder from './Finder';
+import twitter from './twitter.svg';
+import Navigation from './Navigation';
 
 const Wrap = styled.div`
   display: flex;
@@ -14,14 +14,12 @@ const Wrap = styled.div`
 
 const TwitterLogo = styled.img``;
 
-export default () => {
-  return (
-    <div className="container">
-      <Wrap>
-        <Navigation />
-        <TwitterLogo alt="TwitterLogo" src={twitter} />
-        <Finder />
-      </Wrap>
-    </div>
-  );
-};
+export default () => (
+  <div className="container">
+    <Wrap>
+      <Navigation />
+      <TwitterLogo alt="TwitterLogo" src={twitter} />
+      <Finder />
+    </Wrap>
+  </div>
+);

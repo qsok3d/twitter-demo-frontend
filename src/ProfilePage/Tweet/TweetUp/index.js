@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Pinned from "./Pinned";
+import React from 'react';
+import styled from 'styled-components';
+import Pinned from './Pinned';
 
 const TweetPinned = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const TweetUp = styled.div`
 `;
 
 const Name = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
@@ -24,7 +24,7 @@ const Name = styled.span`
 `;
 
 const NickName = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
@@ -34,7 +34,7 @@ const NickName = styled.span`
 `;
 
 const TimeTweet = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
@@ -42,25 +42,38 @@ const TimeTweet = styled.span`
   margin: 0;
 `;
 
-export default props => {
-  if (props.tweet.pinned === false) {
+export default ({ tweet }) => {
+  if (tweet.pinned === false) {
     return (
       <TweetUp>
-        <Name>{props.tweet.name}</Name>
-        <NickName>{props.tweet.nickName}</NickName>
-        <TimeTweet> {props.tweet.timeTweet}</TimeTweet>
+        <Name>
+          {tweet.name}
+        </Name>
+        <NickName>
+          {tweet.nickName}
+        </NickName>
+        <TimeTweet>
+          {' '}
+          {tweet.timeTweet}
+        </TimeTweet>
       </TweetUp>
     );
-  } else {
-    return (
-      <TweetPinned>
-        <Pinned />
-        <TweetUp>
-          <Name>{props.tweet.name}</Name>
-          <NickName>{props.tweet.nickName}</NickName>
-          <TimeTweet> {props.tweet.timeTweet}</TimeTweet>
-        </TweetUp>
-      </TweetPinned>
-    );
   }
+  return (
+    <TweetPinned>
+      <Pinned />
+      <TweetUp>
+        <Name>
+          {tweet.name}
+        </Name>
+        <NickName>
+          {tweet.nickName}
+        </NickName>
+        <TimeTweet>
+          {' '}
+          {tweet.timeTweet}
+        </TimeTweet>
+      </TweetUp>
+    </TweetPinned>
+  );
 };

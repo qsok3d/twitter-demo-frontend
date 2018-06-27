@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import Avatar from "./avatar";
-import media from "./media.svg";
-import one from "./1.png";
-import two from "./2.png";
-import three from "./3.png";
-import four from "./4.png";
-import five from "./5.png";
-import six from "./6.png";
+import React from 'react';
+import styled from 'styled-components';
+import Avatar from './avatar';
+import media from './media.svg';
+import one from './1.png';
+import two from './2.png';
+import three from './3.png';
+import four from './4.png';
+import five from './5.png';
+import six from './6.png';
 
 const Medias = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ const Media = styled.img`
 `;
 
 const Text = styled.p`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -33,42 +33,44 @@ const Text = styled.p`
   margin: 0;
 `;
 
-const Ava = styled.div`
+const Avat = styled.div`
   text-decoration: none;
   border: none;
   display: flex;
   flex-wrap: wrap;
 `;
 
-const ava = [
+const avar = [
   {
-    img: one
+    img: one,
   },
   {
-    img: two
+    img: two,
   },
   {
-    img: three
+    img: three,
   },
   {
-    img: four
+    img: four,
   },
   {
-    img: five
+    img: five,
   },
   {
-    img: six
-  }
+    img: six,
+  },
 ];
 
-export default props => {
-  return (
-    <Medias>
-      <MediaHeader>
-        <Media alt="follow" src={media} />
-        <Text>522 Photos and videos</Text>
-      </MediaHeader>
-      <Ava>{ava.map(ava => <Avatar ava={ava} />)}</Ava>
-    </Medias>
-  );
-};
+export default () => (
+  <Medias>
+    <MediaHeader>
+      <Media alt="follow" src={media} />
+      <Text>
+522 Photos and videos
+      </Text>
+    </MediaHeader>
+    <Avat>
+      {avar.map(ava => <Avatar ava={ava} />)}
+    </Avat>
+  </Medias>
+);
