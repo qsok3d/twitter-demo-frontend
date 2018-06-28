@@ -60,25 +60,25 @@ const ProfileText = styled.p`
   padding-right: 35px;
 `;
 
-export default () => (
+export default ({ userId }) => (
   <Wrap>
     <ProfileHeader>
       <Title>
-Every Interaction
+        {userId}
       </Title>
       <Approved alt="approve" src={approved} />
     </ProfileHeader>
     <ProfileSubtitle>
       <NickName>
-@EveryInteract
+        {userId}
       </NickName>
       <Follow>
 Follows You
       </Follow>
     </ProfileSubtitle>
     <ProfileText>
-        UX Design studio focussed problem solving creativity. Design to us is how can we make things
-        *work* amazing.
+      UX Design studio focussed problem solving creativity. Design to us is how can we make things
+      *work* amazing.
     </ProfileText>
   </Wrap>
 );

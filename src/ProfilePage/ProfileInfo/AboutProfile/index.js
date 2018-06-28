@@ -16,7 +16,7 @@ const Text = styled.span`
   line-height: 28px;
   font-weight: 400;
   margin: 0;
-  color: ${({ active }) => (active ? '#707e88' : '#1da1f2')};
+  color: ${({ active }) => (active ? '#1da1f2' : '#707e88')};
 `;
 
 export default ({ about }) => (

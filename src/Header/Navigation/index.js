@@ -32,25 +32,25 @@ const Text = styled.span`
 
 export default () => (
   <NavSec>
-    <NavBar to="/Home">
+    <NavBar exact to="/">
       <Pic alt="pic" src={home} />
       <Text>
 Home
       </Text>
     </NavBar>
-    <NavBar to="/Moments">
+    <NavBar exact to="/moments">
       <Pic alt="pic" src={moments} />
       <Text>
 Moments
       </Text>
     </NavBar>
-    <NavBar to="/Notifications">
+    <NavBar exact to="/notifications">
       <Pic alt="pic" src={notifications} />
       <Text>
 Notifications
       </Text>
     </NavBar>
-    <NavBar to="/Messages">
+    <NavBar exact to="/messages">
       <Pic alt="pic" src={messages} />
       <Text>
 Messages

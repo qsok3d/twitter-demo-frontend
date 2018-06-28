@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import TweetUp from './TweetUp';
 import TweetContent from './TweetContent';
 import TweetAction from './TweetAction';
@@ -27,33 +26,9 @@ const Action = styled.div`
   padding-right: 40px;
 `;
 
-const TweetNav = styled.nav`
-  display: flex;
-  padding: 15px 0;
-  padding-left: 12px;
-`;
-
-const tweetHeader = [
-  {
-    text: 'Tweets',
-    active: false,
-  },
-  {
-    text: 'Tweets & replies',
-    active: true,
-  },
-  {
-    text: 'Media',
-    active: true,
-  },
-];
-
-export default () => (
+export default ({ userId }) => (
   <Main>
-    <TweetNav>
-      {tweetHeader.map(tweetHead => <TweetHeader tweetHead={tweetHead} />)}
-    </TweetNav>
-
+    <TweetHeader userId={userId} />
     {tweets.map(tweet => (
       <Tweet>
         <Avatar tweet={tweet} />

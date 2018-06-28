@@ -36,9 +36,9 @@ const Button = styled.button`
   margin-bottom: 18px;
 `;
 
-export default () => (
+export default ({ userId }) => (
   <ProfileInfo>
-    <ProfileHeader />
+    <ProfileHeader userId={userId} />
     <About>
       {bout.map(about => <AboutProfile about={about} />)}
     </About>
