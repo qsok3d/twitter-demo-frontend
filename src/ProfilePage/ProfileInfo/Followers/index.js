@@ -33,14 +33,14 @@ const Text = styled.p`
   margin: 0;
 `;
 
-const Ava = styled.div`
+const UserAvatar = styled.div`
   text-decoration: none;
   border: none;
   display: flex;
   flex-wrap: wrap;
 `;
 
-const avar = [
+const picture = [
   {
     img: one,
   },
@@ -69,8 +69,8 @@ export default () => (
 6 Followers you know
       </Text>
     </FollowHeader>
-    <Ava>
-      {avar.map(ava => <Avatar ava={ava} />)}
-    </Ava>
+    <UserAvatar>
+      {picture.map(picAvatar => <Avatar picAvatar={picAvatar} />)}
+    </UserAvatar>
   </Followers>
 );

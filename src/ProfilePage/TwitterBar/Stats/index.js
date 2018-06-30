@@ -43,7 +43,7 @@ export default ({ userId }) => (
 Tweets
       </Stat>
       <Count>
-8.058
+8,058
       </Count>
     </Indicator>
     <Indicator exact to={`/${userId}/following`}>
@@ -59,7 +59,7 @@ Following
 Followers
       </Stat>
       <Count>
-1.815
+1,815
       </Count>
     </Indicator>
     <Indicator exact to={`/${userId}/likes`}>

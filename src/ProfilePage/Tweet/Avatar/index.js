@@ -22,17 +22,18 @@ const AvatarImage = styled.img`
   height: 41px;
 `;
 
-export default ({ tweet }) => (
-  <div>
-    {tweet.pinned ? (
+export default ({ tweet }) => {
+  if (tweet.pinned) {
+    return (
       <AvatarPinned>
         <PinnedImage alt="pinned" src={pinned} />
         <AvatarImage alt="avatar" src={avatar} />
       </AvatarPinned>
-    ) : (
-      <Avatar>
-        <AvatarImage alt="avatar" src={avatar} />
-      </Avatar>
-    )}
-  </div>
-);
+    );
+  }
+  return (
+    <Avatar>
+      <AvatarImage alt="avatar" src={avatar} />
+    </Avatar>
+  );
+};

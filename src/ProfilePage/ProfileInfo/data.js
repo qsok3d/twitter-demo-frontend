@@ -2,7 +2,7 @@ import link from './link.svg';
 import location from './location.svg';
 import calendar from './calendar.svg';
 
-const bout = [
+const aboutUser = [
   {
     text: 'London, UK',
     img: location,
@@ -18,4 +18,4 @@ const bout = [
   },
 ];
 
-export default bout;
+export default aboutUser;

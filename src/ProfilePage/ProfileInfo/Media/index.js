@@ -33,14 +33,14 @@ const Text = styled.p`
   margin: 0;
 `;
 
-const Avat = styled.div`
+const UserAvatar = styled.div`
   text-decoration: none;
   border: none;
   display: flex;
   flex-wrap: wrap;
 `;
 
-const avar = [
+const picture = [
   {
     img: one,
   },
@@ -69,8 +69,8 @@ export default () => (
 522 Photos and videos
       </Text>
     </MediaHeader>
-    <Avat>
-      {avar.map(ava => <Avatar ava={ava} />)}
-    </Avat>
+    <UserAvatar>
+      {picture.map(picAvatar => <Avatar picAvatar={picAvatar} />)}
+    </UserAvatar>
   </Medias>
 );

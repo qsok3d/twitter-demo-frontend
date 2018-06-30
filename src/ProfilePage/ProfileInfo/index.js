@@ -4,7 +4,7 @@ import ProfileHeader from './ProfileHeader';
 import AboutProfile from './AboutProfile';
 import Followers from './Followers';
 import Media from './Media';
-import bout from './data';
+import aboutUser from './data';
 
 const ProfileInfo = styled.div`
   display: flex;
@@ -40,7 +40,7 @@ export default ({ userId }) => (
   <ProfileInfo>
     <ProfileHeader userId={userId} />
     <About>
-      {bout.map(about => <AboutProfile about={about} />)}
+      {aboutUser.map(about => <AboutProfile about={about} />)}
     </About>
     <Buttons>
       <Button>
