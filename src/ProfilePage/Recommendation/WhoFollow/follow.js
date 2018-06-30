@@ -83,46 +83,46 @@ const Dismiss = styled.img`
   right: 0px;
 `;
 
-export default ({ flw, userId = flw.nick }) => {
-  if (flw.approve === false) {
+export default ({ user, userId = user.nick }) => {
+  if (user.approve === false) {
     return (
       <Follow>
-        <Avatar alt="pic" src={flw.img} />
+        <Avatar alt="pic" src={user.img} />
         <Main>
           <HeaderLink exact to={`/${userId}`}>
             <NickName>
-              {flw.nick}
+              {user.nick}
             </NickName>
             <UserName>
-              {flw.user}
+              {user.user}
             </UserName>
           </HeaderLink>
           <Button>
 Follow
           </Button>
         </Main>
-        <Dismiss alt="dissmis" src={flw.dismiss} />
+        <Dismiss alt="dissmis" src={user.dismiss} />
       </Follow>
     );
   }
   return (
     <Follow>
-      <Avatar alt="pic" src={flw.img} />
+      <Avatar alt="pic" src={user.img} />
       <Main>
         <HeaderLink exact to={`/${userId}`}>
           <NickName>
-            {flw.nick}
+            {user.nick}
           </NickName>
-          <Approve alt="pic" src={flw.imgappr} />
+          <Approve alt="pic" src={user.imgappr} />
           <UserName>
-            {flw.user}
+            {user.user}
           </UserName>
         </HeaderLink>
         <Button>
 Follow
         </Button>
       </Main>
-      <Dismiss alt="dissmis" src={flw.dismiss} />
+      <Dismiss alt="dissmis" src={user.dismiss} />
     </Follow>
   );
 };

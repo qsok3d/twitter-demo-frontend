@@ -68,7 +68,7 @@ const Text = styled.p`
   font-weight: 500;
 `;
 
-const flws = [
+const users = [
   {
     approve: false,
     img: avaAi,
@@ -108,7 +108,7 @@ Refresh
         View all
       </View>
     </Header>
-    {flws.map(flw => <Follow flw={flw} />)}
+    {users.map(user => <Follow user={user} />)}
     <Footer>
       <People alt="pic" src={people} />
       <Text>
