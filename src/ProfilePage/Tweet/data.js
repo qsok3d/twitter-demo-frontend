@@ -6,7 +6,7 @@ import likeActive from './likeActive.svg';
 import image from './Image.png';
 import future from './tweetimage.png';
 
-const tweets = [
+const tweet = [
   {
     pinned: true,
     name: 'Every Interaction',
@@ -103,4 +103,4 @@ const tweets = [
   },
 ];
 
-export default tweets;
+export default tweet;

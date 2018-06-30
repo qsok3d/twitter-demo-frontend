@@ -5,10 +5,11 @@ import {
 import ProfilePage from './ProfilePage';
 import Header from './Header';
 
-const Stub = () => (
+const Stub = ({ location }) => (
   <React.Fragment>
     <h1>
-This is
+      This is
+      {`${location.pathname}`}
     </h1>
   </React.Fragment>
 );

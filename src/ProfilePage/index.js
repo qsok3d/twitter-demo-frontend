@@ -6,6 +6,7 @@ import TwitterBar from './TwitterBar';
 import ProfileInfo from './ProfileInfo';
 import Tweet from './Tweet';
 import Recommendation from './Recommendation';
+import TweetHeader from './tweetHeader';
 
 const MainImage = styled.img``;
 
@@ -26,15 +27,40 @@ export default ({ match }) => {
   return (
     <ProfilePage>
       <MainImage alt="main" src={image} />
-      <TwitterBar />
+      <TwitterBar userId={userId} />
       <Profile>
         <div className="container">
           <div className="row">
             <div className="col-xs-3">
-              <Route exact path={`/${userId}`} render={() => <ProfileInfo userId={userId} />} />
+              <ProfileInfo userId={userId} />
             </div>
             <div className="col-offset-3 col-xs-6">
-              <Route exact path={`/${userId}`} render={() => <Tweet userId={userId} />} />
+              <React.Fragment>
+                <TweetHeader userId={userId} />
+                <Route exact path={`/${userId}`} render={() => <Tweet userId={userId} />} />
+                <Route
+                  exact
+                  path={`/${userId}/with_replies`}
+                  render={() => (
+                    <h1>
+                      {' '}
+With replies
+                      {' '}
+                    </h1>
+                  )}
+                />
+                <Route
+                  exact
+                  path={`/${userId}/media`}
+                  render={() => (
+                    <h1>
+                      {' '}
+Media
+                      {' '}
+                    </h1>
+                  )}
+                />
+              </React.Fragment>
             </div>
             <div className="col-offset-9 col-xs-3">
               <Recommendation />

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import TweetUp from './TweetUp';
 import TweetContent from './TweetContent';
 import TweetAction from './TweetAction';
-import TweetHeader from './tweetHeader';
+
 import tweets from './data';
 import Avatar from './Avatar';
 
@@ -26,20 +27,21 @@ const Action = styled.div`
   padding-right: 40px;
 `;
 
-export default ({ userId }) => (
-  <Main>
-    <TweetHeader userId={userId} />
-    {tweets.map(tweet => (
-      <Tweet>
-        <Avatar tweet={tweet} />
-        <Main>
-          <TweetUp tweet={tweet} />
-          <TweetContent tweet={tweet} />
-          <Action>
-            {tweet.action.map(action => <TweetAction action={action} />)}
-          </Action>
-        </Main>
-      </Tweet>
-    ))}
-  </Main>
+export default () => (
+  <React.Fragment>
+    <Main>
+      {tweets.map(tweet => (
+        <Tweet>
+          <Avatar tweet={tweet} />
+          <Main>
+            <TweetUp tweet={tweet} />
+            <TweetContent tweet={tweet} />
+            <Action>
+              {tweet.action.map(action => <TweetAction action={action} />)}
+            </Action>
+          </Main>
+        </Tweet>
+      ))}
+    </Main>
+  </React.Fragment>
 );

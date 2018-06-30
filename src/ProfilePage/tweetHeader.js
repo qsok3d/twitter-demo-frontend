@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = styled.div`
   display: flex;
+  background-color: #fff;
 `;
-
 const TweetNav = styled.nav`
   display: flex;
   padding: 15px 0;
