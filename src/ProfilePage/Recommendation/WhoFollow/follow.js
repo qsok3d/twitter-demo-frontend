@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const Follow = styled.div`
   display: flex;
@@ -21,10 +22,20 @@ const Main = styled.div`
   flex-direction: column;
 `;
 
-const Header = styled.header`
+const HeaderLink = styled(NavLink)`
   display: flex;
   padding-bottom: 9px;
   text-overflow: ellipsis;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.active {
+    color: black;
+  }
+  &.active:hover {
+    text-decoration: none;
+  }
 `;
 
 const NickName = styled.span`
@@ -72,20 +83,20 @@ const Dismiss = styled.img`
   right: 0px;
 `;
 
-export default ({ flw }) => {
+export default ({ flw, userId = flw.nick }) => {
   if (flw.approve === false) {
     return (
       <Follow>
         <Avatar alt="pic" src={flw.img} />
         <Main>
-          <Header>
+          <HeaderLink exact to={`/${userId}`}>
             <NickName>
               {flw.nick}
             </NickName>
             <UserName>
               {flw.user}
             </UserName>
-          </Header>
+          </HeaderLink>
           <Button>
 Follow
           </Button>
@@ -98,7 +109,7 @@ Follow
     <Follow>
       <Avatar alt="pic" src={flw.img} />
       <Main>
-        <Header>
+        <HeaderLink exact to={`/${userId}`}>
           <NickName>
             {flw.nick}
           </NickName>
@@ -106,7 +117,7 @@ Follow
           <UserName>
             {flw.user}
           </UserName>
-        </Header>
+        </HeaderLink>
         <Button>
 Follow
         </Button>

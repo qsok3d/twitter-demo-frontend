@@ -95,7 +95,7 @@ const flws = [
   },
 ];
 
-export default () => (
+export default ({ userId }) => (
   <WhoFollow>
     <Header>
       <Title>
@@ -104,8 +104,8 @@ Who to follow
       <Refresh>
 Refresh
       </Refresh>
-      <View to="/ViewAll">
-View all
+      <View exact to={`/${userId}/ViewAll`}>
+        View all
       </View>
     </Header>
     {flws.map(flw => <Follow flw={flw} />)}
