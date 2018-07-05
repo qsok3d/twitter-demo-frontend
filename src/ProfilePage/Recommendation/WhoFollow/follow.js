@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const Follow = styled.div`
   display: flex;
@@ -21,14 +22,24 @@ const Main = styled.div`
   flex-direction: column;
 `;
 
-const Header = styled.header`
+const HeaderLink = styled(NavLink)`
   display: flex;
   padding-bottom: 9px;
   text-overflow: ellipsis;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.active {
+    color: black;
+  }
+  &.active:hover {
+    text-decoration: none;
+  }
 `;
 
 const NickName = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 13px;
   line-height: 15px;
   font-weight: 600;
@@ -42,7 +53,7 @@ const Approve = styled.img`
 `;
 
 const UserName = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 13px;
   line-height: 15px;
   font-weight: 400;
@@ -57,7 +68,7 @@ const Button = styled.button`
   height: 29px;
   border: 1px solid #1da1f2;
   border-radius: 100px;
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -72,35 +83,34 @@ const Dismiss = styled.img`
   right: 0px;
 `;
 
-export default props => {
-  if (props.flw.approve === false) {
+export default ({ user, userId = user.nick }) => {
+  if (user.approve === false) {
     return (
       <Follow>
-        <Avatar alt="pic" src={props.flw.img} />
+        <Avatar alt="pic" src={user.img} />
         <Main>
-          <Header>
-            <NickName>{props.flw.nick}</NickName>
-            <UserName>{props.flw.user}</UserName>
-          </Header>
+          <HeaderLink exact to={`/${userId}`}>
+            <NickName>{user.nick}</NickName>
+            <UserName>{user.user}</UserName>
+          </HeaderLink>
           <Button>Follow</Button>
         </Main>
-        <Dismiss alt="dissmis" src={props.flw.dismiss} />
-      </Follow>
-    );
-  } else {
-    return (
-      <Follow>
-        <Avatar alt="pic" src={props.flw.img} />
-        <Main>
-          <Header>
-            <NickName>{props.flw.nick}</NickName>
-            <Approve alt="pic" src={props.flw.imgappr} />
-            <UserName>{props.flw.user}</UserName>
-          </Header>
-          <Button>Follow</Button>
-        </Main>
-        <Dismiss alt="dissmis" src={props.flw.dismiss} />
+        <Dismiss alt="dissmis" src={user.dismiss} />
       </Follow>
     );
   }
+  return (
+    <Follow>
+      <Avatar alt="pic" src={user.img} />
+      <Main>
+        <HeaderLink exact to={`/${userId}`}>
+          <NickName>{user.nick}</NickName>
+          <Approve alt="pic" src={user.imgappr} />
+          <UserName>{user.user}</UserName>
+        </HeaderLink>
+        <Button>Follow</Button>
+      </Main>
+      <Dismiss alt="dissmis" src={user.dismiss} />
+    </Follow>
+  );
 };

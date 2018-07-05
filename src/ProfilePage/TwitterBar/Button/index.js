@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import more from "./more.svg";
+import React from 'react';
+import styled from 'styled-components';
+import more from './more.svg';
 
 const Wrap = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const Follow = styled.button`
   height: 39px;
   border: 1px solid #1da1f2;
   border-radius: 100px;
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
@@ -26,11 +26,9 @@ const Follow = styled.button`
 
 const More = styled.img``;
 
-export default () => {
-  return (
-    <Wrap>
-      <Follow>Follow</Follow>
-      <More alt="pic" src={more} />
-    </Wrap>
-  );
-};
+export default () => (
+  <Wrap>
+    <Follow>Follow</Follow>
+    <More alt="pic" src={more} />
+  </Wrap>
+);

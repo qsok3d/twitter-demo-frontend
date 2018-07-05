@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import approved from "./approved.svg";
+import React from 'react';
+import styled from 'styled-components';
+import approved from './approved.svg';
 
 const Wrap = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ const ProfileHeader = styled.div`
 `;
 
 const Title = styled.h2`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 22px;
   line-height: 22px;
   font-weight: 600;
@@ -32,7 +32,7 @@ const ProfileSubtitle = styled.div`
 `;
 
 const NickName = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -42,7 +42,7 @@ const NickName = styled.span`
 `;
 
 const Follow = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
@@ -51,7 +51,7 @@ const Follow = styled.span`
 `;
 
 const ProfileText = styled.p`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -60,21 +60,19 @@ const ProfileText = styled.p`
   padding-right: 35px;
 `;
 
-export default () => {
-  return (
-    <Wrap>
-      <ProfileHeader>
-        <Title>Every Interaction</Title>
-        <Approved alt="approve" src={approved} />
-      </ProfileHeader>
-      <ProfileSubtitle>
-        <NickName>@EveryInteract</NickName>
-        <Follow>Follows You</Follow>
-      </ProfileSubtitle>
-      <ProfileText>
-        UX Design studio focussed problem solving creativity. Design to us is
-        how can we make things *work* amazing.
-      </ProfileText>
-    </Wrap>
-  );
-};
+export default ({ userId }) => (
+  <Wrap>
+    <ProfileHeader>
+      <Title>{userId}</Title>
+      <Approved alt="approve" src={approved} />
+    </ProfileHeader>
+    <ProfileSubtitle>
+      <NickName>{userId}</NickName>
+      <Follow>Follows You</Follow>
+    </ProfileSubtitle>
+    <ProfileText>
+      UX Design studio focussed problem solving creativity. Design to us is how can we make things
+      *work* amazing.
+    </ProfileText>
+  </Wrap>
+);

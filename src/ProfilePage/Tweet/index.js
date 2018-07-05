@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import TweetUp from "./TweetUp";
-import TweetContent from "./TweetContent";
-import TweetAction from "./TweetAction";
-import TweetHeader from "./tweetHeader";
-import { tweet } from "./data";
-import Avatar from "./Avatar";
+import Header from './TweetUp';
+import Content from './TweetContent';
+import Action from './TweetAction';
+
+import tweets from './data';
+import Avatar from './Avatar';
 
 const Tweet = styled.div`
   display: flex;
@@ -21,52 +21,25 @@ const Main = styled.div`
   background-color: #fff;
 `;
 
-const Action = styled.div`
+const ActionLine = styled.div`
   display: flex;
   align-content: center;
   padding-right: 40px;
 `;
 
-const TweetNav = styled.nav`
-  display: flex;
-  padding: 15px 0;
-  padding-left: 12px;
-`;
-
-const tweetHead = [
-  {
-    text: "Tweets",
-    active: false
-  },
-  {
-    text: "Tweets & replies",
-    active: true
-  },
-  {
-    text: "Media",
-    active: true
-  }
-];
-
-export default () => {
-  return (
+export default () => (
+  <React.Fragment>
     <Main>
-      <TweetNav>
-        {tweetHead.map(tweetHead => <TweetHeader tweetHead={tweetHead} />)}
-      </TweetNav>
-
-      {tweet.map(tweet => (
+      {tweets.map(tweet => (
         <Tweet>
           <Avatar tweet={tweet} />
           <Main>
-            <TweetUp tweet={tweet} />
-            <TweetContent tweet={tweet} />
-            <Action>
-              {tweet.action.map(action => <TweetAction action={action} />)}
-            </Action>
+            <Header tweet={tweet} />
+            <Content tweet={tweet} />
+            <ActionLine>{tweet.action.map(action => <Action action={action} />)}</ActionLine>
           </Main>
         </Tweet>
       ))}
     </Main>
-  );
-};
+  </React.Fragment>
+);

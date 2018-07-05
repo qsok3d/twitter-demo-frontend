@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import search from "./search.svg";
+import React from 'react';
+import styled from 'styled-components';
+import search from './search.svg';
 
 const Finder = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const SearchInput = styled.input`
   border: 1px solid #e6ecf0;
   background-color: #f5f8fa;
   padding-left: 11px;
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
@@ -41,22 +41,20 @@ const TweetButton = styled.button`
   background-color: #1da1f2;
   border: none;
   border-radius: 100px;
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 600;
   color: #fff;
 `;
 
-export default () => {
-  return (
-    <Finder>
-      <Search>
-        <SearchInput placeholder="Search Twitter" />
-        <SearchPic alt="search" src={search} />
-      </Search>
-      <Avatar alt="avatar" src={process.env.PUBLIC_URL + "/Image/avatar.png"} />
-      <TweetButton>Tweet</TweetButton>
-    </Finder>
-  );
-};
+export default () => (
+  <Finder>
+    <Search>
+      <SearchInput placeholder="Search Twitter" />
+      <SearchPic alt="search" src={search} />
+    </Search>
+    <Avatar alt="avatar" src={`${process.env.PUBLIC_URL}/Image/avatar.png`} />
+    <TweetButton>Tweet</TweetButton>
+  </Finder>
+);

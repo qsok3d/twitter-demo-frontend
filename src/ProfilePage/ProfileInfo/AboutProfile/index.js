@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const About = styled.div`
   display: flex;
@@ -11,19 +11,17 @@ const Pic = styled.img`
 `;
 
 const Text = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 14px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
-  color: ${props => (props.active ? "#707e88" : "#1da1f2")};
+  color: ${({ active }) => (active ? '#1da1f2' : '#707e88')};
 `;
 
-export default props => {
-  return (
-    <About>
-      <Pic alt="pic" src={props.about.img} />
-      <Text active={props.about.link}>{props.about.text}</Text>
-    </About>
-  );
-};
+export default ({ about }) => (
+  <About>
+    <Pic alt="pic" src={about.img} />
+    <Text active={about.link}>{about.text}</Text>
+  </About>
+);

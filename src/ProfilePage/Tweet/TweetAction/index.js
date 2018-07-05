@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const TweetAction = styled.div`
   padding-top: 15px;
@@ -18,7 +18,7 @@ const ButtonImage = styled.img`
 `;
 
 const Count = styled.span`
-  font-family: Helvetica Neue, "Lato", Helvetica, Arial, , sans-serif;
+  font-family: Helvetica Neue, 'Lato', Helvetica, Arial, , sans-serif;
   font-size: 13px;
   line-height: 15px;
   font-weight: 400;
@@ -30,19 +30,15 @@ const CountActive = Count.extend`
   color: #e32b51;
 `;
 
-export default tweet => {
-  return (
-    <TweetAction>
-      <Button>
-        <ButtonImage alt="picture" src={tweet.action.img} />
-      </Button>
-      {tweet.action.active ? (
-        <CountActive>
-          {tweet.action.count > 0 && tweet.action.count}
-        </CountActive>
-      ) : (
-        <Count>{tweet.action.count > 0 && tweet.action.count}</Count>
-      )}
-    </TweetAction>
-  );
-};
+export default tweet => (
+  <TweetAction>
+    <Button>
+      <ButtonImage alt="picture" src={tweet.action.img} />
+    </Button>
+    {tweet.action.active ? (
+      <CountActive>{tweet.action.count > 0 && tweet.action.count}</CountActive>
+    ) : (
+      <Count>{tweet.action.count > 0 && tweet.action.count}</Count>
+    )}
+  </TweetAction>
+);
