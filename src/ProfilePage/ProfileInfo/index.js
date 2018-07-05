@@ -36,21 +36,42 @@ const Button = styled.button`
   margin-bottom: 18px;
 `;
 
-export default ({ userId }) => (
-  <ProfileInfo>
-    <ProfileHeader userId={userId} />
-    <About>
-      {aboutUser.map(about => <AboutProfile about={about} />)}
-    </About>
-    <Buttons>
-      <Button>
+class Profile extends React.Component {
+  state = {
+    userData: [],
+  };
+
+  componentDidMount() {
+    const url = 'https://twitter-demo.erodionov.ru';
+    const secretCode = process.env.REACT_APP_SECRET_CODE;
+
+    fetch(`${url}/api/v1/accounts/1?access_token=${secretCode}`)
+      .then(response => response.json())
+      .then(userData => this.setState({ userData }));
+  }
+
+  render() {
+    const { userData } = this.state;
+    console.log(userData);
+    return (
+      <ProfileInfo>
+        <ProfileHeader userId={userData.display_name} />
+        <About>
+          {aboutUser.map(about => <AboutProfile about={about} />)}
+        </About>
+        <Buttons>
+          <Button>
 Tweet to
-      </Button>
-      <Button>
+          </Button>
+          <Button>
 Message
-      </Button>
-    </Buttons>
-    <Followers />
-    <Media />
-  </ProfileInfo>
-);
+          </Button>
+        </Buttons>
+        <Followers />
+        <Media />
+      </ProfileInfo>
+    );
+  }
+}
+
+export default Profile;

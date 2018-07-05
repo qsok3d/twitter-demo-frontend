@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Route } from 'react-router-dom';
 import image from './image.png';
 import TwitterBar from './TwitterBar';
-import ProfileInfo from './ProfileInfo';
+import Profile from './ProfileInfo';
 import Tweet from './Tweet';
 import Recommendation from './Recommendation';
 import TweetHeader from './tweetHeader';
@@ -16,7 +16,7 @@ const ProfilePage = styled.div`
   box-sizing: border-box;
 `;
 
-const Profile = styled.div`
+const ProfileWrap = styled.div`
   display: flex;
   background-color: #e6ecf0;
   padding-top: 9px;
@@ -28,11 +28,11 @@ export default ({ match }) => {
     <ProfilePage>
       <MainImage alt="main" src={image} />
       <TwitterBar userId={userId} />
-      <Profile>
+      <ProfileWrap>
         <div className="container">
           <div className="row">
             <div className="col-xs-3">
-              <ProfileInfo userId={userId} />
+              <Profile userId={userId} />
             </div>
             <div className="col-offset-3 col-xs-6">
               <React.Fragment>
@@ -67,7 +67,7 @@ Media
             </div>
           </div>
         </div>
-      </Profile>
+      </ProfileWrap>
     </ProfilePage>
   );
 };

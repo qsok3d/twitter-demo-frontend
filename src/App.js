@@ -20,7 +20,7 @@ function App() {
       <React.Fragment>
         <Header />
         <Switch>
-          <Redirect exact from="/" to="/EveryInteract" />
+          <Redirect exact from="/" to="/1" />
           <Route exact path="/moments" component={Stub} />
           <Route exact path="/notifications" component={Stub} />
           <Route exact path="/messages" component={Stub} />
