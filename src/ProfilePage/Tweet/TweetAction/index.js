@@ -36,13 +36,9 @@ export default tweet => (
       <ButtonImage alt="picture" src={tweet.action.img} />
     </Button>
     {tweet.action.active ? (
-      <CountActive>
-        {tweet.action.count > 0 && tweet.action.count}
-      </CountActive>
+      <CountActive>{tweet.action.count > 0 && tweet.action.count}</CountActive>
     ) : (
-      <Count>
-        {tweet.action.count > 0 && tweet.action.count}
-      </Count>
+      <Count>{tweet.action.count > 0 && tweet.action.count}</Count>
     )}
   </TweetAction>
 );

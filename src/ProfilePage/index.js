@@ -6,7 +6,7 @@ import TwitterBar from './TwitterBar';
 import ProfileInfo from './ProfileInfo';
 import Tweet from './Tweet';
 import Recommendation from './Recommendation';
-import TweetHeader from './tweetHeader';
+import TweetHeader from './TweetHeader';
 
 const MainImage = styled.img``;
 
@@ -41,25 +41,9 @@ export default ({ match }) => {
                 <Route
                   exact
                   path={`/${userId}/with_replies`}
-                  render={() => (
-                    <h1>
-                      {' '}
-With replies
-                      {' '}
-                    </h1>
-                  )}
+                  render={() => <h1> With replies </h1>}
                 />
-                <Route
-                  exact
-                  path={`/${userId}/media`}
-                  render={() => (
-                    <h1>
-                      {' '}
-Media
-                      {' '}
-                    </h1>
-                  )}
-                />
+                <Route exact path={`/${userId}/media`} render={() => <h1> Media </h1>} />
               </React.Fragment>
             </div>
             <div className="col-offset-9 col-xs-3">

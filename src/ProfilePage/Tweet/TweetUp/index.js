@@ -46,16 +46,9 @@ export default ({ tweet }) => {
   if (tweet.pinned === false) {
     return (
       <TweetUp>
-        <Name>
-          {tweet.name}
-        </Name>
-        <NickName>
-          {tweet.nickName}
-        </NickName>
-        <TimeTweet>
-          {' '}
-          {tweet.timeTweet}
-        </TimeTweet>
+        <Name>{tweet.name}</Name>
+        <NickName>{tweet.nickName}</NickName>
+        <TimeTweet> {tweet.timeTweet}</TimeTweet>
       </TweetUp>
     );
   }
@@ -63,16 +56,9 @@ export default ({ tweet }) => {
     <TweetPinned>
       <Pinned />
       <TweetUp>
-        <Name>
-          {tweet.name}
-        </Name>
-        <NickName>
-          {tweet.nickName}
-        </NickName>
-        <TimeTweet>
-          {' '}
-          {tweet.timeTweet}
-        </TimeTweet>
+        <Name>{tweet.name}</Name>
+        <NickName>{tweet.nickName}</NickName>
+        <TimeTweet> {tweet.timeTweet}</TimeTweet>
       </TweetUp>
     </TweetPinned>
   );

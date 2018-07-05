@@ -7,10 +7,8 @@ import Header from './Header';
 
 const Stub = ({ location }) => (
   <React.Fragment>
-    <h1>
-      This is
-      {`${location.pathname}`}
-    </h1>
+    This is
+    {`${location.pathname}`}
   </React.Fragment>
 );
 

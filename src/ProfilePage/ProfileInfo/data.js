@@ -2,7 +2,7 @@ import link from './link.svg';
 import location from './location.svg';
 import calendar from './calendar.svg';
 
-const aboutUser = [
+const userInfo = [
   {
     text: 'London, UK',
     img: location,
@@ -18,4 +18,4 @@ const aboutUser = [
   },
 ];
 
-export default aboutUser;
+export default userInfo;

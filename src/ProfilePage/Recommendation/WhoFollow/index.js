@@ -98,12 +98,8 @@ const users = [
 export default ({ userId }) => (
   <WhoFollow>
     <Header>
-      <Title>
-Who to follow
-      </Title>
-      <Refresh>
-Refresh
-      </Refresh>
+      <Title>Who to follow</Title>
+      <Refresh>Refresh</Refresh>
       <View exact to={`/${userId}/ViewAll`}>
         View all
       </View>
@@ -111,9 +107,7 @@ Refresh
     {users.map(user => <Follow user={user} />)}
     <Footer>
       <People alt="pic" src={people} />
-      <Text>
-Find people you know
-      </Text>
+      <Text>Find people you know</Text>
     </Footer>
   </WhoFollow>
 );

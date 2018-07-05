@@ -65,12 +65,8 @@ export default () => (
   <Medias>
     <MediaHeader>
       <Media alt="follow" src={media} />
-      <Text>
-522 Photos and videos
-      </Text>
+      <Text>522 Photos and videos</Text>
     </MediaHeader>
-    <UserAvatar>
-      {picture.map(picAvatar => <Avatar picAvatar={picAvatar} />)}
-    </UserAvatar>
+    <UserAvatar>{picture.map(picAvatar => <Avatar picAvatar={picAvatar} />)}</UserAvatar>
   </Medias>
 );

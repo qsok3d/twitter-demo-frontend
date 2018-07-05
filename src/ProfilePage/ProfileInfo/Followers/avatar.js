@@ -8,4 +8,4 @@ const Avatar = styled.img`
   padding-bottom: 6px;
 `;
 
-export default ({ picAvatar }) => <Avatar alt="ava" src={picAvatar.img} />;
+export default ({ imageAvatar }) => <Avatar alt="ava" src={imageAvatar.img} />;

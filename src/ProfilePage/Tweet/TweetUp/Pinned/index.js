@@ -17,8 +17,6 @@ const Text = styled.span`
 
 export default () => (
   <Pinned>
-    <Text>
-Pinned Tweet
-    </Text>
+    <Text>Pinned Tweet</Text>
   </Pinned>
 );

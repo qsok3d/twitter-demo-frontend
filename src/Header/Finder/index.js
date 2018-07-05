@@ -55,8 +55,6 @@ export default () => (
       <SearchPic alt="search" src={search} />
     </Search>
     <Avatar alt="avatar" src={`${process.env.PUBLIC_URL}/Image/avatar.png`} />
-    <TweetButton>
-Tweet
-    </TweetButton>
+    <TweetButton>Tweet</TweetButton>
   </Finder>
 );

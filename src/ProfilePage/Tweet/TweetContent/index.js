@@ -37,23 +37,15 @@ export default ({ tweet }) => {
   if (tweet.img1 === '') {
     return (
       <TweetContent>
-        <Text>
-          {tweet.text}
-        </Text>
-        <Site>
-          {tweet.site}
-        </Site>
+        <Text>{tweet.text}</Text>
+        <Site>{tweet.site}</Site>
       </TweetContent>
     );
   }
   return (
     <TweetContent>
-      <Text>
-        {tweet.text}
-      </Text>
-      <Site>
-        {tweet.site}
-      </Site>
+      <Text>{tweet.text}</Text>
+      <Site>{tweet.site}</Site>
       <Image alt="pic" src={tweet.img1} />
     </TweetContent>
   );

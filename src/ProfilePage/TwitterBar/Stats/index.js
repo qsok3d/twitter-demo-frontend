@@ -39,44 +39,24 @@ const Stats = styled.div`
 export default ({ userId }) => (
   <Stats>
     <Indicator exact to={`/${userId}`}>
-      <Stat>
-Tweets
-      </Stat>
-      <Count>
-8,058
-      </Count>
+      <Stat>Tweets</Stat>
+      <Count>8,058</Count>
     </Indicator>
     <Indicator exact to={`/${userId}/following`}>
-      <Stat>
-Following
-      </Stat>
-      <Count>
-721
-      </Count>
+      <Stat>Following</Stat>
+      <Count>721</Count>
     </Indicator>
     <Indicator exact to={`/${userId}/followers`}>
-      <Stat>
-Followers
-      </Stat>
-      <Count>
-1,815
-      </Count>
+      <Stat>Followers</Stat>
+      <Count>1,815</Count>
     </Indicator>
     <Indicator exact to={`/${userId}/likes`}>
-      <Stat>
-Likes
-      </Stat>
-      <Count>
-460
-      </Count>
+      <Stat>Likes</Stat>
+      <Count>460</Count>
     </Indicator>
     <Indicator exact to={`/${userId}/lists`}>
-      <Stat>
-Lists
-      </Stat>
-      <Count>
-2
-      </Count>
+      <Stat>Lists</Stat>
+      <Count>2</Count>
     </Indicator>
   </Stats>
 );

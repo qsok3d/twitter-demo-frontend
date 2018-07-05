@@ -34,27 +34,19 @@ export default () => (
   <NavSec>
     <NavBar exact to="/">
       <Pic alt="pic" src={home} />
-      <Text>
-Home
-      </Text>
+      <Text>Home</Text>
     </NavBar>
     <NavBar exact to="/moments">
       <Pic alt="pic" src={moments} />
-      <Text>
-Moments
-      </Text>
+      <Text>Moments</Text>
     </NavBar>
     <NavBar exact to="/notifications">
       <Pic alt="pic" src={notifications} />
-      <Text>
-Notifications
-      </Text>
+      <Text>Notifications</Text>
     </NavBar>
     <NavBar exact to="/messages">
       <Pic alt="pic" src={messages} />
-      <Text>
-Messages
-      </Text>
+      <Text>Messages</Text>
     </NavBar>
   </NavSec>
 );

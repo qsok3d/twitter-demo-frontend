@@ -63,18 +63,12 @@ const ProfileText = styled.p`
 export default ({ userId }) => (
   <Wrap>
     <ProfileHeader>
-      <Title>
-        {userId}
-      </Title>
+      <Title>{userId}</Title>
       <Approved alt="approve" src={approved} />
     </ProfileHeader>
     <ProfileSubtitle>
-      <NickName>
-        {userId}
-      </NickName>
-      <Follow>
-Follows You
-      </Follow>
+      <NickName>{userId}</NickName>
+      <Follow>Follows You</Follow>
     </ProfileSubtitle>
     <ProfileText>
       UX Design studio focussed problem solving creativity. Design to us is how can we make things

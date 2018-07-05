@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import TweetUp from './TweetUp';
-import TweetContent from './TweetContent';
-import TweetAction from './TweetAction';
+import Header from './TweetUp';
+import Content from './TweetContent';
+import Action from './TweetAction';
 
 import tweets from './data';
 import Avatar from './Avatar';
@@ -21,7 +21,7 @@ const Main = styled.div`
   background-color: #fff;
 `;
 
-const Action = styled.div`
+const ActionLine = styled.div`
   display: flex;
   align-content: center;
   padding-right: 40px;
@@ -34,11 +34,9 @@ export default () => (
         <Tweet>
           <Avatar tweet={tweet} />
           <Main>
-            <TweetUp tweet={tweet} />
-            <TweetContent tweet={tweet} />
-            <Action>
-              {tweet.action.map(action => <TweetAction action={action} />)}
-            </Action>
+            <Header tweet={tweet} />
+            <Content tweet={tweet} />
+            <ActionLine>{tweet.action.map(action => <Action action={action} />)}</ActionLine>
           </Main>
         </Tweet>
       ))}

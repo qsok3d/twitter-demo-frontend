@@ -27,11 +27,7 @@ const SubTitle = styled.p`
 
 export default ({ theme }) => (
   <Them>
-    <Title>
-      {theme.title}
-    </Title>
-    <SubTitle>
-      {theme.subtitle}
-    </SubTitle>
+    <Title>{theme.title}</Title>
+    <SubTitle>{theme.subtitle}</SubTitle>
   </Them>
 );

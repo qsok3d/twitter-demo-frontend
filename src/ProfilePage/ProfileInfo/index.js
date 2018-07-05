@@ -4,7 +4,7 @@ import ProfileHeader from './ProfileHeader';
 import AboutProfile from './AboutProfile';
 import Followers from './Followers';
 import Media from './Media';
-import aboutUser from './data';
+import userInfo from './data';
 
 const ProfileInfo = styled.div`
   display: flex;
@@ -39,16 +39,10 @@ const Button = styled.button`
 export default ({ userId }) => (
   <ProfileInfo>
     <ProfileHeader userId={userId} />
-    <About>
-      {aboutUser.map(about => <AboutProfile about={about} />)}
-    </About>
+    <About>{userInfo.map(about => <AboutProfile about={about} />)}</About>
     <Buttons>
-      <Button>
-Tweet to
-      </Button>
-      <Button>
-Message
-      </Button>
+      <Button>Tweet to</Button>
+      <Button>Message</Button>
     </Buttons>
     <Followers />
     <Media />

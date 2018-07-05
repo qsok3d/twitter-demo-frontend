@@ -90,16 +90,10 @@ export default ({ user, userId = user.nick }) => {
         <Avatar alt="pic" src={user.img} />
         <Main>
           <HeaderLink exact to={`/${userId}`}>
-            <NickName>
-              {user.nick}
-            </NickName>
-            <UserName>
-              {user.user}
-            </UserName>
+            <NickName>{user.nick}</NickName>
+            <UserName>{user.user}</UserName>
           </HeaderLink>
-          <Button>
-Follow
-          </Button>
+          <Button>Follow</Button>
         </Main>
         <Dismiss alt="dissmis" src={user.dismiss} />
       </Follow>
@@ -110,17 +104,11 @@ Follow
       <Avatar alt="pic" src={user.img} />
       <Main>
         <HeaderLink exact to={`/${userId}`}>
-          <NickName>
-            {user.nick}
-          </NickName>
+          <NickName>{user.nick}</NickName>
           <Approve alt="pic" src={user.imgappr} />
-          <UserName>
-            {user.user}
-          </UserName>
+          <UserName>{user.user}</UserName>
         </HeaderLink>
-        <Button>
-Follow
-        </Button>
+        <Button>Follow</Button>
       </Main>
       <Dismiss alt="dissmis" src={user.dismiss} />
     </Follow>

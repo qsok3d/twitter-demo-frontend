@@ -28,9 +28,7 @@ const More = styled.img``;
 
 export default () => (
   <Wrap>
-    <Follow>
-Follow
-    </Follow>
+    <Follow>Follow</Follow>
     <More alt="pic" src={more} />
   </Wrap>
 );

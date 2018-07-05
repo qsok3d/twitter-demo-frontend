@@ -66,12 +66,8 @@ const themes = [
 export default () => (
   <Trends>
     <Header>
-      <Title>
-United Kingdom Trends
-      </Title>
-      <Change>
-Change
-      </Change>
+      <Title>United Kingdom Trends</Title>
+      <Change>Change</Change>
     </Header>
     {themes.map(theme => <Theme theme={theme} />)}
   </Trends>

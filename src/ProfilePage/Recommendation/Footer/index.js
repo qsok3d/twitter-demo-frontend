@@ -36,33 +36,15 @@ const Text = styled.span`
 export default () => (
   <Footer>
     <Navigation>
-      <Text>
-© 2018
-      </Text>
-      <Nav to="/Twitter">
-Twitter
-      </Nav>
-      <Nav to="/About">
-About
-      </Nav>
-      <Nav to="/HelpCenter">
-Help Center
-      </Nav>
-      <Nav to="/Terms">
-Terms
-      </Nav>
-      <Nav to="/PrivacyPolicy">
-Privacy policy
-      </Nav>
-      <Nav to="/Cookies">
-Cookies
-      </Nav>
-      <Nav to="/Ads">
-Ads
-      </Nav>
-      <Nav to="/Info">
-Info
-      </Nav>
+      <Text>© 2018</Text>
+      <Nav to="/Twitter">Twitter</Nav>
+      <Nav to="/About">About</Nav>
+      <Nav to="/HelpCenter">Help Center</Nav>
+      <Nav to="/Terms">Terms</Nav>
+      <Nav to="/PrivacyPolicy">Privacy policy</Nav>
+      <Nav to="/Cookies">Cookies</Nav>
+      <Nav to="/Ads">Ads</Nav>
+      <Nav to="/Info">Info</Nav>
     </Navigation>
   </Footer>
 );

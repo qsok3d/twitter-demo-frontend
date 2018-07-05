@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import 'normalize.css';
 import 'flexboxgrid2/flexboxgrid2.css';
 import './index.css';
-import 'numbro';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 

@@ -65,12 +65,8 @@ export default () => (
   <Followers>
     <FollowHeader>
       <Follower alt="follow" src={follower} />
-      <Text>
-6 Followers you know
-      </Text>
+      <Text>6 Followers you know</Text>
     </FollowHeader>
-    <UserAvatar>
-      {picture.map(picAvatar => <Avatar picAvatar={picAvatar} />)}
-    </UserAvatar>
+    <UserAvatar>{picture.map(imageAvatar => <Avatar imageAvatar={imageAvatar} />)}</UserAvatar>
   </Followers>
 );

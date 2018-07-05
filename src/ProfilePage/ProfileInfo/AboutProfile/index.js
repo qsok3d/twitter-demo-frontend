@@ -22,8 +22,6 @@ const Text = styled.span`
 export default ({ about }) => (
   <About>
     <Pic alt="pic" src={about.img} />
-    <Text active={about.link}>
-      {about.text}
-    </Text>
+    <Text active={about.link}>{about.text}</Text>
   </About>
 );
