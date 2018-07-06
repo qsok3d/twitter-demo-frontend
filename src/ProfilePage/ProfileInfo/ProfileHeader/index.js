@@ -64,21 +64,18 @@ export default ({ userId }) => (
   <Wrap>
     <ProfileHeader>
       <Title>
-        {userId}
+        {userId.display_name}
       </Title>
       <Approved alt="approve" src={approved} />
     </ProfileHeader>
     <ProfileSubtitle>
       <NickName>
-        {userId}
+        {userId.acct}
       </NickName>
       <Follow>
 Follows You
       </Follow>
     </ProfileSubtitle>
-    <ProfileText>
-      UX Design studio focussed problem solving creativity. Design to us is how can we make things
-      *work* amazing.
-    </ProfileText>
+    <ProfileText dangerouslySetInnerHTML={{ __html: userId.note }} />
   </Wrap>
 );

@@ -6,7 +6,7 @@ import TwitterBar from './TwitterBar';
 import Profile from './ProfileInfo';
 import Tweet from './Tweet';
 import Recommendation from './Recommendation';
-import TweetHeader from './tweetHeader';
+import TweetHeader from './TweetHeader';
 
 const MainImage = styled.img``;
 

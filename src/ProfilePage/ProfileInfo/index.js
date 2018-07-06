@@ -4,14 +4,8 @@ import ProfileHeader from './ProfileHeader';
 import AboutProfile from './AboutProfile';
 import Followers from './Followers';
 import Media from './Media';
-import aboutUser from './data';
 
 const ProfileInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const About = styled.div`
   display: flex;
   flex-direction: column;
 `;
@@ -55,10 +49,9 @@ class Profile extends React.Component {
     console.log(userData);
     return (
       <ProfileInfo>
-        <ProfileHeader userId={userData.display_name} />
-        <About>
-          {aboutUser.map(about => <AboutProfile about={about} />)}
-        </About>
+        <ProfileHeader userId={userData} />
+        <AboutProfile userId={userData} />
+
         <Buttons>
           <Button>
 Tweet to
@@ -67,7 +60,7 @@ Tweet to
 Message
           </Button>
         </Buttons>
-        <Followers />
+        <Followers userId={userData} />
         <Media />
       </ProfileInfo>
     );

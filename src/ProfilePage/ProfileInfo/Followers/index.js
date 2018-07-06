@@ -61,12 +61,14 @@ const picture = [
   },
 ];
 
-export default () => (
+export default ({ userId }) => (
   <Followers>
     <FollowHeader>
       <Follower alt="follow" src={follower} />
       <Text>
-6 Followers you know
+        {userId.followers_count}
+        {' '}
+Followers you know
       </Text>
     </FollowHeader>
     <UserAvatar>
